@@ -486,9 +486,6 @@ animation: bottomBubbles 0.6s ease-in-out forwards;
             font-size: 16px;
             padding: 13px 20px;
         }
-      }
-      @media(max-width:500px){
-
         .cc{
             display: flex;
             justify-content: center;
