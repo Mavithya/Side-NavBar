@@ -81,7 +81,7 @@ window.addEventListener('resize', function() {
   var viewportWidth = window.innerWidth;
 
   
-  if (viewportWidth <= 500) {
+  if (viewportWidth <= 600) {
     sidebar.classList.toggle("close");
     // carousel.remove('.carousel');
     // bgBlur.remove('.bg-blur');
