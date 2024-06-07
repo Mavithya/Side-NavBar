@@ -1,154 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-
+    <title>Sign IN</title>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-
-<body class="relative flex items-center justify-center min-h-screen bg-gray-100">
-    <nav class="sidebar close">
-        <header>
-            <div class="image-text">
-                <span class="image">
-                    <img src="2151038151.jpg" alt="logo">
-                </span>
-
-                <div class="text header—text">
-                    <span class="name">AWE Railways</span>
-                    <br>
-                    <span class="profession">Web developer</span>
-                </div>
-            </div>
-
-            <i class="bx bx-chevron-right toggle"></i>
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-
-                <li class="search-box">
-
-                    <i class="bx bx-search icon"></i>
-                    <input type="search" placeholder="Search...">
-                </li>
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class="bx bx-home-alt icon"></i>
-                            <span class="text nav-text">Dashboard</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class="bx bxl-trello icon"></i>
-                            <span class="text nav-text">Train</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class="bx bxl-periscope icon"></i>
-                            <span class="text nav-text">Destination</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class="bx bx-bell icon"></i>
-                            <span class="text nav-text">Notification</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class="bx bx-receipt icon"></i>
-                            <span class="text nav-text">Receipt</span>
-                        </a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">
-                            <i class="bx bx-credit-card icon"></i>
-                            <span class="text nav-text">Credit</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="bottom-content">
-                <li class="">
-                    <a href="#">
-                        <i class="bx bx-log-out icon"></i>
-                        <span class="text nav-text">Logout</span>
-                    </a>
-                </li>
-
-                <li class="mode">
-                    <div class="moon-sun">
-                        <i class="bx bx-moon icon moon"></i>
-                        <i class="bx bx-sun icon sun"></i>
-
-                    </div>
-                    <span class="mode-text text">Dark Mode</span>
-
-                    <div class="toggle-switch">
-                        <span class="switch">
-
-                        </span>
-                    </div>
-
-                </li>
-            </div>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-tr from-gray-100 via-indigo-500 to-purple-600">
+    <div class="w-full max-w-xs sign-in">
+        <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md">
+          <div class="mb-4">
+            <label class="block mb-2 text-sm font-bold text-gray-700" for="username">
+              Username
+            </label>
+            <input class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+          </div>
+          <div class="mb-6">
+            <label class="block mb-2 text-sm font-bold text-gray-700" for="password">
+              Password
+            </label>
+            <input class="w-full px-3 py-2 mb-3 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
+            <p class="text-xs italic text-gray-700">Input your password.</p>
+          </div>
+          <div class="flex items-center justify-between">
+           <a href="sign-in.html" class="delay-500"> <button class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline" type="button">
+              Sign In
+            </button>
+        </a>
+            <a class="inline-block text-sm font-bold text-blue-500 align-baseline cursor-pointer hover:text-blue-800" onclick="" id="cna">
+              Create an account
+            </a>
+          </div>
+        </form>
+        <p class="text-xs text-center text-gray-800">
+          &copy;2024 AWE Railways. All rights reserved.
+        </p>
+      </div>
+      <div class="w-full max-w-xl delay-500 opacity-0" id="sign-up">
+      <form class="px-8 pt-6 pb-8 mb-4 bg-white rounded shadow-md">
+        <div class="flex flex-wrap mb-6 -mx-3">
+          <div class="w-full px-3 mb-6 md:w-1/2 md:mb-0">
+            <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-first-name">
+              First Name
+            </label>
+            <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-red-500 rounded appearance-none focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="Jane">
+            <p class="text-xs italic text-red-500">Please fill out this field.</p>
+          </div>
+          <div class="w-full px-3 md:w-1/2">
+            <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-last-name">
+              Last Name
+            </label>
+            <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Doe">
+          </div>
         </div>
-    </nav>
-    <section class="flex items-center justify-center home">
-        
-        <div class="bg-blur"></div>
-       
-                <div class="relative w-full max-w-6xl mx-auto overflow-hidden rounded-lg cc">
-        
+        <div class="flex flex-wrap mb-6 -mx-3">
+          <div class="w-full px-3">
+            <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-password">
+              Password
+            </label>
+            <input class="block w-full px-4 py-3 mb-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-password" type="password" placeholder="******************">
+            <p class="text-xs italic text-gray-600">Make it as long and as crazy as you'd like</p>
+          </div>
+        </div>
+        <div class="flex flex-wrap mb-2 -mx-3">
+          <div class="w-full px-3 mb-6 md:w-1/3 md:mb-0">
+            <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-city">
+              City
+            </label>
+            <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="Albuquerque">
+          </div>
+          <div class="w-full px-3 mb-6 md:w-1/3 md:mb-0">
+            <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-state">
+              State
+            </label>
+            <div class="relative">
+              <select class="block w-full px-4 py-3 pr-8 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                <option>New Mexico</option>
+                <option>Missouri</option>
+                <option>Texas</option>
+              </select>
+              <div class="absolute inset-y-0 right-0 flex items-center px-2 text-gray-700 pointer-events-none">
+                <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="w-full px-3 mb-6 md:w-1/3 md:mb-0">
+            <label class="block mb-2 text-xs font-bold tracking-wide text-gray-700 uppercase" for="grid-zip">
+              Zip
+            </label>
+            <input class="block w-full px-4 py-3 leading-tight text-gray-700 bg-gray-200 border border-gray-200 rounded appearance-none focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="90210">
+          </div>
+        </div>
+      </form>
+    </div>
+    <script>
+        document.getElementById('cna').addEventListener('click', function(){
+            $('#sign-up').removeClass('opacity-0');
+            $('.sign-in').addClass('opacity-0');
+            $('.sign-in').createElement('p').innerHTML = 'Create an account';
             
-                <div class="carousel">
-                    <div class="carousel-item">
-                        <img src="img2.jpg" alt="Slide 1" class="w-full cc">
-                        <div class="carousel-content">
-                            <h1 class="mb-2 sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10 ">Welcome to Sri Lanka <br>Railways</h1>
-                            <p class="mb-2 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl sm:mb-4 md:mb-6 lg:mb-8 xl:mb-10">Online Train Ticket Reservation</p>
-                            <button class="button">Take a Ticket</button>
-                          </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img.png" alt="Slide 2" class="w-full cc">
-                        <div class="carousel-content">
-                            <h1>Main Heading 2</h1>
-                            <p>Subheading 2</p>
-                            <button>Button 2</button>
-                          </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="img4.jpg" alt="Slide 3" class="w-full cc">
-                        <div class="carousel-content">
-                            <h1>Main Heading 3</h1>
-                            <p>Subheading 3</p>
-                            <button>Button 3</button>
-                          </div>
-                    </div>
-                </div>
-                <button id="prev" class="nav-btn prev-btn"><</button>
-                <button id="next" class="nav-btn next-btn">></button>
-           
-        </div>
-        
-        
-
-      
-        
-    </section>
-    <script src="script.js"></script>
+        })                                                          
+    </script>
 </body>
-
 </html>
